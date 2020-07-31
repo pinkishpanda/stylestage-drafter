@@ -262,6 +262,10 @@ header .container > a.link-github:hover {
         font-size: 6rem;
     }
 }
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: grid;
     grid-template-areas: "header header" "main main" "aside1 aside2" "footer footer";
