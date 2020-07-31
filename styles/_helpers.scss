@@ -1,0 +1,26 @@
+@mixin ctaButton() {
+    display: inline-block;
+    color: $colour--body-text;
+    font-weight: bold;
+    white-space: nowrap;
+    background-color: $colour--button-bg;
+    border: solid 2px $colour--button-bg;
+    padding: 8px 20px;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+    }
+}
+
+@mixin visuallyHidden() {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

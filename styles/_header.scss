@@ -1,0 +1,103 @@
+header {
+    padding-top: 120px;
+    padding-bottom: 1rem;
+    margin: 0;
+
+    background-color: $colour--header-bg;
+    color: $colour--header-text;
+
+    .container {
+        max-width: var(--width--container);
+        margin: 0 auto;
+        padding: 1.5rem;
+        display: grid;
+        grid-template-areas:
+            "h1block    h1block"
+            "h2block    h2block"
+            "space      space"
+            "maintained github";
+        grid-template-columns: auto min-content;
+        grid-template-rows: auto auto 4rem max-content;
+
+        > h1 {
+            font-family: $font--heading;
+            font-size: 10rem;
+            font-weight: normal;
+            line-height: 0.8em;
+            padding-bottom: 4rem;
+            margin-bottom: 2rem;
+            position: relative;
+            grid-area: h1block;
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 15px;
+                width: 120px;
+                background-image: repeating-linear-gradient(
+                    -45deg,
+                    transparent 0 2px,
+                    $colour--highlight 2px 4px
+                );
+            }
+        }
+
+        > h2 {
+            font-weight: normal;
+            grid-area: h2block;
+        }
+
+        > p {
+            grid-area: maintained;
+            margin: 0;
+
+            a {
+                color: $colour--header-text;
+                text-decoration: none;
+                border-bottom: solid 2px $colour--highlight;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: $colour--highlight;
+                    $color: $colour--header-text;
+                }
+            }
+        }
+
+        > a.link-github {
+            grid-area: github;
+            text-decoration: none;
+
+            @include ctaButton();
+
+            &:hover {
+                color: $colour--button-text;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    header {
+        padding-top: 1.5rem;
+
+        .container {
+            max-width: 100%;
+            padding-right: 60px;
+            grid-template-areas:
+                "h1block"
+                "h2block"
+                "space"
+                "maintained"
+                "github";
+            grid-template-columns: auto;
+            grid-template-rows: auto auto 4rem 2fr 1fr;
+
+            h1 {
+                font-size: 6rem;
+            }
+        }
+    }
+}

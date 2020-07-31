@@ -1,0 +1,24 @@
+/** 
+ * CSS submission for Style Stage https://stylestage.moderncss.dev/
+ *
+ * By Claudine Ong
+ */
+
+:root {
+    --width--container: 900px;
+}
+
+@import "fonts";
+@import "colours";
+@import "reset";
+@import "helpers";
+@import "nav";
+@import "header";
+@import "layout";
+
+body {
+    font-family: $font--body;
+    font-size: 18px;
+    background-color: $colour--body-bg;
+    color: $colour--body-text;
+}
