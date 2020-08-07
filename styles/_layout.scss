@@ -387,6 +387,36 @@ footer.page-footer {
     }
 }
 
+.skip-link {
+    position: absolute;
+    top: auto;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
+    background-color: $colour--button-bg;
+    border: solid 2px $colour--button-bg;
+    color: $colour--body-text;
+    font-size: 1.125rem;
+    font-weight: bold;
+    white-space: nowrap;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+
+    &:focus {
+        position: fixed;
+        top: 4rem;
+        left: 1rem;
+        width: auto;
+        height: auto;
+
+        display: inline-block;
+        z-index: 12;
+    }
+}
+
 @media screen and (max-width: 640px) {
     body {
         grid-template-areas:
@@ -423,6 +453,10 @@ footer.page-footer {
             max-width: 100%;
             padding-right: 60px;
         }
+    }
+
+    .skip-link:focus {
+        top: 1rem;
     }
 }
 

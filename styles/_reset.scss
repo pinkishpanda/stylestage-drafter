@@ -57,24 +57,3 @@ select {
         scroll-behavior: auto !important;
     }
 }
-
-.skip-link {
-    position: absolute;
-    top: auto;
-    left: -10000px;
-    width: 1px;
-    height: 1px;
-    background-color: var(--color-secondary);
-    color: #fff;
-    font-size: 1.125rem;
-    overflow: hidden;
-
-    &:focus {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: auto;
-        height: auto;
-        padding: 0.5em;
-    }
-}
