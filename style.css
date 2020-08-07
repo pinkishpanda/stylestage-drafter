@@ -225,8 +225,10 @@ header .container > p a {
     border-bottom: solid 2px #e2845b;
     transition: all 0.3s ease-in-out;
 }
-header .container > p a:hover {
+header .container > p a:hover,
+header .container > p a:focus {
     background-color: #e2845b;
+    color: #252f38;
 }
 header .container > a.link-github {
     grid-area: github;
@@ -238,12 +240,14 @@ header .container > a.link-github {
     background-color: #e2845b;
     border: solid 2px #e2845b;
     padding: 8px 20px;
+    text-align: center;
 }
 header .container > a.link-github:hover,
 header .container > a.link-github:focus {
     background-color: transparent;
 }
-header .container > a.link-github:hover {
+header .container > a.link-github:hover,
+header .container > a.link-github:focus {
     color: #edebe3;
 }
 
@@ -421,6 +425,8 @@ article section a.link-guidelines {
     background-color: #e2845b;
     border: solid 2px #e2845b;
     padding: 8px 20px;
+    text-align: center;
+    border: solid 2px #a76244;
 }
 article section a.link-guidelines:hover,
 article section a.link-guidelines:focus {
@@ -464,6 +470,8 @@ article footer#files .container > a {
     border: solid 2px #e2845b;
     padding: 8px 20px;
     text-align: center;
+    border: solid 2px #a76244;
+    text-align: center;
     margin: 5px;
     flex: 1;
 }
@@ -492,6 +500,8 @@ aside .container > a {
     background-color: #e2845b;
     border: solid 2px #e2845b;
     padding: 8px 20px;
+    text-align: center;
+    border: solid 2px #a76244;
 }
 aside .container > a:hover,
 aside .container > a:focus {
@@ -642,31 +652,35 @@ footer.page-footer ul li a {
     background-color: #e2845b;
     border: solid 2px #e2845b;
     padding: 8px 20px;
+    text-align: center;
     width: 100%;
 }
 footer.page-footer ul li a:hover,
 footer.page-footer ul li a:focus {
     background-color: transparent;
 }
-footer.page-footer ul li a:hover {
+footer.page-footer ul li a:hover,
+footer.page-footer ul li a:focus {
     color: #edebe3;
 }
 
 @media screen and (max-width: 640px) {
     body {
-        grid-template-areas: "header" "main" "aside1" "aside2" "footer";
+        grid-template-areas: "header" "main" "aside2" "aside1" "footer";
         grid-template-columns: 1fr;
     }
 
     article {
-        padding-right: 60px;
         max-width: 100%;
     }
     article section a.link-guidelines {
         display: block;
     }
 
-    aside.profile {
+    article,
+    aside.profile,
+    aside#styles,
+    aside#sponsor-footer {
         padding-right: 60px;
     }
 

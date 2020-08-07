@@ -59,9 +59,10 @@ header {
                 border-bottom: solid 2px $colour--highlight;
                 transition: all 0.3s ease-in-out;
 
-                &:hover {
+                &:hover,
+                &:focus {
                     background-color: $colour--highlight;
-                    $color: $colour--header-text;
+                    color: $colour--header-bg;
                 }
             }
         }
@@ -72,7 +73,8 @@ header {
 
             @include ctaButton();
 
-            &:hover {
+            &:hover,
+            &:focus {
                 color: $colour--button-text;
             }
         }

@@ -157,6 +157,7 @@ article {
 
         a.link-guidelines {
             @include ctaButton();
+            border: solid 2px $colour--button-border;
         }
     }
 
@@ -194,6 +195,7 @@ article {
 
             > a {
                 @include ctaButton();
+                border: solid 2px $colour--button-border;
                 text-align: center;
                 margin: 5px;
                 flex: 1;
@@ -217,6 +219,7 @@ aside {
 
         > a {
             @include ctaButton();
+            border: solid 2px $colour--button-border;
         }
     }
 }
@@ -375,7 +378,8 @@ footer.page-footer {
                 @include ctaButton();
                 width: 100%;
 
-                &:hover {
+                &:hover,
+                &:focus {
                     color: $colour--button-text;
                 }
             }
@@ -388,13 +392,12 @@ footer.page-footer {
         grid-template-areas:
             "header"
             "main"
-            "aside1"
             "aside2"
+            "aside1"
             "footer";
         grid-template-columns: 1fr;
     }
     article {
-        padding-right: 60px;
         max-width: 100%;
 
         section {
@@ -404,7 +407,10 @@ footer.page-footer {
         }
     }
 
-    aside.profile {
+    article,
+    aside.profile,
+    aside#styles,
+    aside#sponsor-footer {
         padding-right: 60px;
     }
 
